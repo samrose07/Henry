@@ -24,7 +24,8 @@ public class GPActivated : MonoBehaviour
     [Tooltip("Type in one of these to activate a function:\n" +
         "MoveDirection\n" +
         "Disappear\n" +
-        "LaunchDown")]
+        "LaunchDown\n" +
+        "ButtonIndicator")]
     [SerializeField] private string Function;
     private bool didLaunch = false;
     private float step;
@@ -60,6 +61,9 @@ public class GPActivated : MonoBehaviour
                     break;
                 case "LaunchDown":
                     LaunchDown();
+                    break;
+                case "ButtonIndicator":
+                    ButtonIndicator();
                     break;
             }
         }
@@ -108,5 +112,10 @@ public class GPActivated : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void ButtonIndicator()
+    {
+        Color c = gameObject.GetComponent<Renderer>().material.color;
+        gameObject.GetComponent<Renderer>().material.color = new Color(c.r, 255, c.b);
+    }
     #endregion
 }

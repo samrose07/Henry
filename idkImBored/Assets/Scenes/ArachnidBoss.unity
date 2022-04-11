@@ -24934,8 +24934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 353259049}
   cam: {fileID: 871790568}
-  timeRemaining: 180
+  timeRemaining: 720
   isCountingDown: 1
+  timerText: {fileID: 1815307137}
 --- !u!4 &705363577
 Transform:
   m_ObjectHideFlags: 0

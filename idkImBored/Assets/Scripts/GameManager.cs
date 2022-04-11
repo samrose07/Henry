@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
     private GameObject gameOb;
     [SerializeField] private float timeRemaining;
     [SerializeField] private bool isCountingDown = true;
-    private TMP_Text timerText;
+    [SerializeField] private TMP_Text timerText;
     private string ttext = "";
     #endregion
 
     #region start and update
     private void Start()
     {
-        timerText = TMP_Text.FindObjectOfType<TMP_Text>(); //find the timer to display the time
+        //timerText = TMP_Text.FindObjectOfType<TMP_Text>(); //find the timer to display the time
         ttext = timeRemaining.ToString();   //set the timer's text value to the current time
         timerText.text = ttext;     //set the UI text to the timer text value
     }

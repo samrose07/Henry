@@ -217,7 +217,7 @@ public class PlayerController : MonoBehaviour
     {
         if(!groundedChar && numGroundPounds > 0)                                //airborn and got ground pound? O.o
         {
-            if (Input.GetKeyUp(KeyCode.LeftShift))                              //tryna ground?
+            if (Input.GetButtonDown("Woosh"))                              //tryna ground?
             {
 
                 //spawn a ground pound object below you.
@@ -245,7 +245,7 @@ public class PlayerController : MonoBehaviour
     //a flashy move that was planned to have more implementation, but does not.
     void DiveBro()                                  
     {
-        if (!groundedChar && Input.GetKey(KeyCode.LeftAlt))                        //airborn and pressin alt? (not available on game pads)
+        if (!groundedChar && Input.GetButton("Dive"))                        //airborn and pressin alt? (not available on game pads)
         {
             //this can be used to hover a bit if needed!     playerVelocity.y *= .9f;
             playerVelocity.y -= (0.1f + divingSpeedAdjuster);                      //you're gonna fall real fast if you're diving.
